@@ -4,9 +4,6 @@ import products from "./src/functions/products";
 import productsById from "./src/functions/productsById";
 import createProduct from "./src/functions/createProduct";
 
-// import createProduct from "@functions/createProduct";
-// import hello from '@functions/hello';
-
 const serverlessConfiguration: AWS = {
   service: 'products-ts',
   frameworkVersion: '3',
@@ -31,6 +28,7 @@ const serverlessConfiguration: AWS = {
           {
             Effect: "Allow",
             Action: [
+              "dynamodb:DescribeTable",
               "dynamodb:Query",
               "dynamodb:Scan",
               "dynamodb:GetItem",
@@ -43,13 +41,13 @@ const serverlessConfiguration: AWS = {
           {
             Effect: "Allow",
             Action: [
+              "dynamodb:DescribeTable",
               "dynamodb:Query",
               "dynamodb:Scan",
               "dynamodb:GetItem",
               "dynamodb:PutItem",
               "dynamodb:DeleteItem",
             ],
-            // Resource: `arn:aws:dynamodb:eu-west-1:${process.env.BD_ID}:table/stocks`,
             Resource: "arn:aws:dynamodb:eu-west-1:007756198797:table/stocks",
           },
         ],
