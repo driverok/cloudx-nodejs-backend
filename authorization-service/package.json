@@ -1,0 +1,22 @@
+{
+  "name": "import service",
+  "version": "1.0.0",
+  "description": "Import products service",
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1238.0"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "serverless": "^3.0.0",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-esbuild": "^1.23.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}
